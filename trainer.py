@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 
 class regression:
-	def __init__(self, theta0:int, theta1:int, learning_rate:float = 0.1, threshold:float = 0.0001, iter:int = 1000, path:str ="./model_params.csv"):
+	def __init__(self, theta0: float, theta1: float, learning_rate: float = 0.1, threshold: float = 0.0001, iter: int = 1000, path: str = "./model_params.csv"):
 		self.theta0 = theta0
 		self.theta1 = theta1
 		self.learning_rate = learning_rate
@@ -49,7 +49,7 @@ def main():
 	#plt.title("Price vs Mileage")
 	#plt.gca().xaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"{int(x / 1000)}k"))
 	#plt.show()
-	reg = regression(0,0)
+	reg = regression(0.0, 0.0)
 	reg.train(km, price)
 
 
